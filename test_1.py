@@ -40,3 +40,35 @@ main
 
 call for the main function
 """
+
+
+
+# Coding:
+def option1(days):
+	return 100*days
+
+def option2(days):
+	return (2**(days-1))
+
+def comparisons(salary1, salary2):
+	# Comparison to see if option 1 is the highest accumulative salary.
+	if (salary1 > salary2):
+		print("Option 1 is better!")
+
+	# Comparison to see if both of the options are the same amount
+	elif (salary1 == salary):
+		print("Option 1 and option 2 pays the same.")
+
+	# This covers any other possibility (which is basically that option 2 is higher than option 1)
+	else:
+		print("Option 2 is better!")
+
+def main():
+	days = 10
+	salary1 = option1(days)
+	salary2 = option2(days)
+	print("The salary accumulated for option 1 is", salary1, "after the", days, "days.")
+	print("The salary accumulated for option 2 is", salary2, "after the", days, "days.")
+	comparisons(salary1, salary2)
+
+main()
