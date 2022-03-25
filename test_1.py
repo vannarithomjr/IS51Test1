@@ -48,7 +48,13 @@ def option1(days):
 	return 100*days
 
 def option2(days):
-	return (2**(days-1))
+	arr = []
+	number = 1
+	arr.append(number)
+	for x in range(days-1):
+		number += number
+		arr.append(number)
+	return sum(arr)
 
 def comparisons(salary1, salary2):
 	# Comparison to see if option 1 is the highest accumulative salary.
@@ -56,7 +62,7 @@ def comparisons(salary1, salary2):
 		print("Option 1 is better!")
 
 	# Comparison to see if both of the options are the same amount
-	elif (salary1 == salary):
+	elif (salary1 == salary2):
 		print("Option 1 and option 2 pays the same.")
 
 	# This covers any other possibility (which is basically that option 2 is higher than option 1)
